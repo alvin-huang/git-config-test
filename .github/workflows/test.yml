@@ -6,13 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           repository: hashicorp/packer
           ref: 36c2301781f69dd2f4aa38de28e2fdc7e8d5972a
-          fetch-depth: 0
       - run: git config -l
       - run: echo "git config is - $(git config --get remote.origin.url)"
       - run: ls -l
