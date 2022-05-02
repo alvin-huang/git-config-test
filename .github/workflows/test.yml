@@ -15,5 +15,6 @@ jobs:
       - run: git config -l
       - run: echo "git config is - $(git config --get remote.origin.url)"
       - run: git config -l --local
+      - run: git tag --points-at HEAD | cat
       - run: ls -la
       - uses: alvin-huang/action-git-config@v1.0.0
