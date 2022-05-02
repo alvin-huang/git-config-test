@@ -12,10 +12,10 @@ jobs:
         with:
           repository: hashicorp/packer
           ref: 36c2301781f69dd2f4aa38de28e2fdc7e8d5972a
+          fetch-depth: 0
       - run: git config -l
       - run: echo "git config is - $(git config --get remote.origin.url)"
       - run: git config -l --local
-      - run: git fetch --tags
       - run: git tag --points-at HEAD | cat
       - run: ls -la
       - uses: alvin-huang/action-git-config@v1.0.0
