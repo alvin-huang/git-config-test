@@ -14,5 +14,5 @@ jobs:
           ref: 36c2301781f69dd2f4aa38de28e2fdc7e8d5972a
       - run: git config -l
       - run: echo "git config is - $(git config --get remote.origin.url)"
-      - run: ls -l
+      - run: ls -la
       - uses: alvin-huang/action-git-config@v1.0.0
